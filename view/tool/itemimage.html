@@ -1,0 +1,14 @@
+
+<div id="{$_name}" style="{$style}" class="xepan-commerce-item-images {$class} ">{$Content}
+  <div class="single">
+    <div class="container">{zoom3_image}
+      <div data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;" class="single-right-left animated wow slideInUp animated"><img id="zoom_03{$_name}" src="{firstimage}{/}" data-zoom-image="{$firstimage}" class="zoomwrapper-img xepan-commerce-item-image-to-zoom"/></div>{/zoom3_image}
+      <div id="gal1{$_name}" style="margin-top:30px;" class="grid images_3_of_2 xshop-item-image-list">
+        {rows}
+        {row}<a style="float:left" href="#{$id}" data-image="{$file}" data-zoom-image="{$file}" class="xshop-item-image-link elevatezoom-gallery"><img id="img_{$id}" src="{$thumb_url}" alt="{$img_alt}" title="{$img_title}" data-imagezoom="true" style="width: 18%;, height: auto;, float: left;, max-width: 235px;"/></a>{/row}
+        {/rows}
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>

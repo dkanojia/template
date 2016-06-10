@@ -1,0 +1,127 @@
+.xepan-commerce-tool-cart.xepan-grid.main-box.clearfix.atk-table.atk-table-zebra.atk-table-bordered(id="{$_name}" class="{$class}")
+    {$Content}
+    {Pannel}
+    {$grid_buttons} 
+    {/Pannel}
+    .checkout
+      .container
+        h3 My Shopping Bag   
+        {lister}
+        {$total_count} 
+        .table-responsive.checkout-right.animated.wow.slideInUp(data-wow-delay='.5s')
+          table.timetable_sub
+            {header}
+            thead
+              tr
+                {cols}{col}
+                th Remove
+                th Image
+                th Item
+                th Quantity
+                th Amount
+                th Total
+                {/}{/}
+            {/}
+            {$subheader}
+            tbody
+                {rows}{row}
+                tr(class="{$odd_even} xepan-commerce-tool-cart-item-row" data-id="{$id}")
+                  {cols}
+                  {cart_item_remove_button_wrapper} 
+                  td
+                    button.round-button-circle.pull-right.xepan-commerce-cart-item-delete(data-cartid='{$id}') x
+                  {/}
+                  td.invert-image
+                    a(href='single')
+                        img(alt='{image}{/}' src='{$image_url}' onerror="this.src='vendor/xepan/commerce/templates/view/tool/cart/images/not-found.png'") 
+                  td
+                    .text-muted Code : 
+                        span.text-sucess {$item_code} 
+                    div.text-warning.xepan-name(style="width:75%") {$name}
+                    {design_edit_wrapper}
+                    {design_edit}
+                    a(href="{$design_edit_url}")
+                        small Edit Design
+                    {/}
+                    {/}
+                    small {custom_fields_wrapper}
+                    small {custom_field}
+                    div 
+                        small 
+                            {$id}: {$name}
+                    {/}{/}
+                  td.invert
+                    {qty_wrapper}
+                    {qty_form}
+                    {$qty}
+                    {/}{/}  
+                  td.invert 
+                    table.timetable_sub
+                        tbody
+                            tr
+                                td
+                                    div Unit Price
+                                    div Shipping Charge 
+                                td
+                                    div.xepan-commerce-tool-total {unit_price}{/}
+                                    div 
+                                        {$shipping_charge_amount}<br/>
+                                    {$shipping_duration_text}
+                  td.invert 
+                    {$amount_including_tax}
+                  {/}
+                {/}{/}
+        {/lister}
+        {not_found}
+        .xepan-cart-empty
+          {$not_found_message}
+        {/}
+        {footer}
+        .checkout-left
+          .checkout-right-basket.animated.wow.slideInLeft(data-wow-delay='.5s')
+            a(href='index')
+              span.glyphicon.glyphicon-menu-left(aria-hidden='true')
+              | Back To Shopping
+          .checkout-left-basket.animated.wow.slideInLeft(data-wow-delay='.5s')
+            h4 Shopping basket
+            ul
+              li
+                | Total Amount 
+                i :
+                span {$total_amount}
+              li
+                | Shipping Amount 
+                i :
+                span {$total_shipping_amount}
+              li
+                | Gross Amount 
+                i :
+                span {$gross_amount}
+              {discount_voucher_wrapper}
+              li
+                | Apply Coupon 
+                i :
+                span(style="width: 58%;") {$discount_voucher}
+              li
+                | Discount Amount 
+                i :
+                span {$discount_amount}
+              {/}
+              {express_shipping_wrapper}
+              li
+                | Express Shipping 
+                i :
+                span {$express_shipping_checkbox}
+              {/}
+              li
+                | Net Amount 
+                i :
+                span(style="width: 15%;") {$net_amount}
+          {proceed_to_next_button_wrapper}
+          .checkout-right-basket.animated.wow.slideInLeft(data-wow-delay='.5s')
+            a.xepan-cart-proceed-to-next-btn(href='#')
+              span.glyphicon.glyphicon-menu-right(aria-hidden='true')
+              | Proceed to Checkout
+          {/}
+        {/footer}
+        .clearfix  

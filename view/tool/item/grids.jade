@@ -1,0 +1,67 @@
+div(id='{$_name}' class="{$class} row" style="{$style}")
+  {rows}{row}
+  .col-md-3.product-men
+    .men-pro-item.simpleCart_shelfItem
+      .men-thumb-item.xepan-commerce-item(data-xsnb-item-id='{$id}', onclick='javascript:void(0);')
+        {image_wrapper}
+        .xepan-commerce-image-wrapper
+          img.pro-image-front(src='{first_image}abc{/}')
+          img.pro-image-back(src='{first_image}abc{/}')
+        {/image_wrapper}
+        .men-cart-pro
+          .inner-men-cart-pro
+            a.link-product-add-cart(href='{$item_detail_page_url_via_image}') Quick View
+        span.product-new-top New
+      .item-info-product
+        h4
+          {name_wrapper}
+          .xepan-commerce-item-name-wrapper
+            a.xepan-commerce-item-name(href='{item_detail_page_url_via_name}{/}') {$name}
+          {/}
+        .info-product-price
+          {sale_price_wrapper}
+          span.item_price.xepan-commerce-tool-item-sale-price {$sale_price}
+          {/}
+          {original_price_wrapper}
+          del.xepan-commerce-tool-item-original-price {$original_price}
+          {/}
+          {shipping_charge_wrapper} 
+          .item_price.xepan-commerce-tool-item-shipping-charge {$shipping_charge} 
+          {/}
+          {description_wrapper}
+          small.xepan-commerce-item-short-description {$description}
+          {/}
+          {specification_wrapper}
+          small
+            div.xepan-commerce-tool-item-specification
+              {specification}
+              {rows}{row}
+              {$name}
+              {$value}
+              {/}{/}
+              {/specification}
+          {/}
+        {personalizedbtn_wrapper}
+        a.item_add.single-item.hvr-outline-out.button2(data-xsnbitemid="{$id}" class="commerce-personalize-button-wrapper") {$personalizedbtn}
+        {/}
+        {addtocart_wrapper}
+        small
+          .item_add.single-item.hvr-outline-out.button2
+          .xepan-commerce-item-addtocart(data-xsnbitemid="{$id}" data-name="{$name}") {$Addtocart}
+        {/}
+  {/}{/}
+
+  {not_found}
+  div.full-width.alert.alert-warning(role="alert")
+    strong.glyphicon.glyphicon-warning-sign &nbsp;Warning!
+      span &nbsp;{$not_found_message}
+  {/}
+  {paginator_wrapper}
+  .xepan-commerce-item-paginator(style='float:none; clear:both')
+    {$Paginator}
+  {/}
+
+  style.
+    .xepan-commerce-item-addtocart span{
+      font-size: 1.2em;
+    }

@@ -1,0 +1,53 @@
+
+<div id="{$_name}" class="{$class}">{$Content}
+  <div class="single">
+    <div class="container">
+      <div data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInRight;" class="col-md-12 single-right-left simpleCart_shelfItem animated wow slideInRight animated">{name_wrapper}
+        <div class="xepan-commerce-itemdetail-name">
+          <h3>{$name}</h3>
+        </div>{/}
+        <div class="xepan-commerce-itemdetail-amount xshop-item"></div>
+        <p>{sale_price_wrapper}<span class="item_price xepan-commerce-tool-item-sale-price">Amount : {$sale_price}</span>{/}
+          {original_price_wrapper}
+          <del class="xepan-commerce-tool-item-original-price">{$original_price}</del>{/}
+          {shipping_charge_wrapper}
+          <div class="xepan-commerce-tool-item-shipping-charge">{$shipping_charge}</div>{/}
+        </p>
+      </div>
+      <div class="clearfix"> </div>
+      <div data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;" class="bootstrap-tab animated wow slideInUp animated">
+        <div role="tabpanel" data-example-id="togglable-tabs" class="bs-example bs-example-tabs">
+          <ul id="myTab" role="tablist" class="nav nav-tabs">{description_wrapper}
+            <li role="presentation" class="active"><a id="home-tab" href="#home" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Description</a></li>{/}
+            {specification_wrapper}
+            <li role="presentation"><a id="profile-tab" href="#profile" role="tab" data-toggle="tab" aria-controls="profile">Specification</a></li>{/}
+            {addtocart_wrapper}
+            <li role="presentation"><a id="addtocart-tab" href="#addtocart" role="tab" data-toggle="tab" aria-controls="addtocart">Price</a></li>{/}
+            {item_upload_wrapper}
+            <li role="presentation"><a id="upload-tab" href="#upload" role="tab" data-toggle="tab" aria-controls="profile">Upload Your Item</a></li>{/}
+          </ul>
+          <div id="myTabContent" class="tab-content">
+            <div id="home" role="tabpanel" aria-labelledby="home-tab" class="tab-pane fade in active bootstrap-tab-text">
+              <h5>Product Brief Description</h5>
+              <p>
+                 
+                {$item_description}
+              </p>
+            </div>
+            <div id="profile" role="tabpanel" aria-labelledby="profile-tab" class="tab-pane fade bootstrap-tab-text">
+              <div class="bootstrap-tab-text-grids">{$specification}</div>
+            </div>
+            <div id="addtocart" role="tabpanel" aria-labelledby="addtocart-tab" class="tab-pane fade bootstrap-tab-text">
+              <div class="bootstrap-tab-text-grids">
+                <div data-xsnbitemid="{$id}" data-name="{$name}" class="xshop-item-custom-field-name xshop-item-addtocart">{$Addtocart}</div>
+              </div>
+            </div>
+            <div id="upload" role="tabpanel" aria-labelledby="upload-tab" class="tab-pane fade bootstrap-tab-text">
+              <div class="bootstrap-tab-text-grids">{$item_upload}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+div(id='{$_name}' class="{$class}")
+  {$Content}
+  .single
+    .container
+      .col-md-12.single-right-left.simpleCart_shelfItem.animated.wow.slideInRight.animated(data-wow-delay='.5s', style='visibility: visible; animation-delay: 0.5s; animation-name: slideInRight;')
+        {name_wrapper}
+        .xepan-commerce-itemdetail-name
+          h3 {$name}
+        {/}
+        .xepan-commerce-itemdetail-amount.xshop-item
+        p
+          {sale_price_wrapper}
+          span.item_price.xepan-commerce-tool-item-sale-price
+            | Amount : {$sale_price}
+          {/}
+          {original_price_wrapper}
+          del.xepan-commerce-tool-item-original-price
+            {$original_price}
+          {/}
+          {shipping_charge_wrapper}
+          .xepan-commerce-tool-item-shipping-charge
+            {$shipping_charge}
+          {/}
+      .clearfix  
+      .bootstrap-tab.animated.wow.slideInUp.animated(data-wow-delay='.5s', style='visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;')
+        .bs-example.bs-example-tabs(role='tabpanel', data-example-id='togglable-tabs')
+          ul#myTab.nav.nav-tabs(role='tablist')
+            {description_wrapper}
+            li.active(role='presentation')
+              a#home-tab(href='#home', role='tab', data-toggle='tab', aria-controls='home', aria-expanded='true') Description
+            {/}
+            {specification_wrapper}
+            li(role='presentation')
+              a#profile-tab(href='#profile', role='tab', data-toggle='tab', aria-controls='profile') Specification
+            {/}
+            {addtocart_wrapper}
+            li(role='presentation')
+              a#addtocart-tab(href='#addtocart', role='tab', data-toggle='tab', aria-controls='addtocart') Price
+            {/}
+            {item_upload_wrapper}
+            li(role='presentation')
+              a#upload-tab(href='#upload', role='tab', data-toggle='tab', aria-controls='profile') Upload Your Item
+            {/}
+          #myTabContent.tab-content
+            #home.tab-pane.fade.in.active.bootstrap-tab-text(role='tabpanel', aria-labelledby='home-tab')
+              h5 Product Brief Description
+              p  
+                | {$item_description}
+            #profile.tab-pane.fade.bootstrap-tab-text(role='tabpanel', aria-labelledby='profile-tab')
+              .bootstrap-tab-text-grids
+                {$specification}
+            #addtocart.tab-pane.fade.bootstrap-tab-text(role='tabpanel', aria-labelledby='addtocart-tab')
+              .bootstrap-tab-text-grids
+                    .xshop-item-custom-field-name.xshop-item-addtocart(data-xsnbitemid="{$id}" data-name="{$name}"){$Addtocart}
+            #upload.tab-pane.fade.bootstrap-tab-text(role='tabpanel', aria-labelledby='upload-tab')
+              .bootstrap-tab-text-grids
+                {$item_upload}
+            

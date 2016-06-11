@@ -29,8 +29,7 @@
             </div></small>{/}
         </div>{personalizedbtn_wrapper}<a data-xsnbitemid="{$id}" class="item_add single-item hvr-outline-out button2 commerce-personalize-button-wrapper">{$personalizedbtn}</a>{/}
         {addtocart_wrapper}<small>
-          <div class="item_add single-item hvr-outline-out button2"></div>
-          <div data-xsnbitemid="{$id}" data-name="{$name}" class="xepan-commerce-item-addtocart">{$Addtocart}</div></small>{/}
+          <div data-xsnbitemid="{$id}" data-name="{$name}" style="display:inline-block; " class="xepan-commerce-item-addtocart">{$Addtocart}</div></small>{/}
       </div>
     </div>
   </div>{/}{/}
@@ -38,9 +37,4 @@
   <div role="alert" class="full-width alert alert-warning"><strong class="glyphicon glyphicon-warning-sign">&nbsp;Warning!<span>&nbsp;{$not_found_message}</span></strong></div>{/}
   {paginator_wrapper}
   <div style="float:none; clear:both" class="xepan-commerce-item-paginator">{$Paginator}</div>{/}
-  <style>
-    .xepan-commerce-item-addtocart span{
-      font-size: 1.2em;
-    }
-  </style>
 </div>

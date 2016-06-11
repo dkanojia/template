@@ -1,0 +1,34 @@
+
+<div id="{$_name}" style="{$style}" class="{$class} row">{rows}{row}
+  <div data-xsnb-item-id="{$id}" onclick="javascript:void(0);" class="col-sm-6 content-img-left text-center xepan-commerce-item">
+    <div class="content-grid-effect slow-zoom vertical">{image_wrapper}
+      <div class="img-box xepan-commerce-image-wrapper"><img src="{first_image}abc{/}" alt="image" href="{$item_detail_page_url_via_image}" class="img-responsive zoom-img"/></div>{/image_wrapper}
+      <div class="info-box">
+        <div class="info-content simpleCart_shelfItem">{name_wrapper}
+          <h4 href="{item_detail_page_url_via_name}{/}" class="xepan-commerce-item-name">{$name}</h4><span class="separator"></span>{/}
+          {sale_price_wrapper}
+          <p><span class="item_price xepan-commerce-tool-item-sale-price">{$sale_price}</span></p>{/}
+          {original_price_wrapper}<span class="separator"></span><span class="item_price xepan-commerce-tool-item-sale-price">{$original_price}</span>{/}
+          {shipping_charge_wrapper} <span class="item_price xepan-commerce-tool-item-sale-price">{$shipping_charge} </span>{/}
+          {description_wrapper}<span class="separator"></span><small class="xepan-commerce-item-short-description">{$description}</small>{/}
+          {specification_wrapper}<span class="separator"></span><small>
+            <div class="xepan-commerce-tool-item-specification">
+              {specification}
+              {rows}{row}
+              {$name}
+              {$value}
+              {/}{/}
+              {/specification}
+            </div></small>{/}
+          {personalizedbtn_wrapper}<span class="separator"></span><a data-xsnbitemid="{$id}" class="item_add single-item hvr-outline-out button2 commerce-personalize-button-wrapper">{$personalizedbtn}</a>{/}
+          {addtocart_wrapper}<span class="separator"></span>
+          <div data-xsnbitemid="{$id}" data-name="{$name}" style="display:inline-block; " class="xepan-commerce-item-addtocart">{$Addtocart}</div>{/}<span class="separator"></span>
+        </div>
+      </div>
+    </div>
+  </div>{/}{/}
+  {not_found}
+  <div role="alert" class="full-width alert alert-warning"><strong class="glyphicon glyphicon-warning-sign">&nbsp;Warning!<span>&nbsp;{$not_found_message}</span></strong></div>{/}
+  {paginator_wrapper}
+  <div style="float:none; clear:both" class="xepan-commerce-item-paginator">{$Paginator}</div>{/}
+</div>

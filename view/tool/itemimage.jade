@@ -1,16 +1,15 @@
 div.xepan-commerce-item-images(id='{$_name}' class="{$class} " style="{$style}")
   {$Content}
   .single
-    .container
-      {zoom3_image}
-      .single-right-left.animated.wow.slideInUp.animated(data-wow-delay='.5s', style='visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;')
-        img.zoomwrapper-img(id='zoom_03{$_name}' src='{firstimage}{/}', data-zoom-image='{$firstimage}' class="xepan-commerce-item-image-to-zoom")
-      {/zoom3_image}
-      .grid.images_3_of_2.xshop-item-image-list(id='gal1{$_name}' style="margin-top:30px;")
-        {rows}
-        {row}
-        a.xshop-item-image-link.elevatezoom-gallery(style="float:left" href='\#{$id}' data-image='{$file}' data-zoom-image='{$file}')
-          img(id='img_{$id}' src='{$thumb_url}' alt='{$img_alt}' title='{$img_title}' data-imagezoom='true' style="width: 18%;, height: auto;, float: left;, max-width: 235px;")
-        {/row}
-        {/rows}
-        .clearfix
+    {zoom3_image}
+    .single-right-left.animated.wow.slideInUp.animated(data-wow-delay='.5s', style='visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;')
+      img.zoomwrapper-img(id='zoom_03{$_name}' src='{firstimage}{/}', data-zoom-image='{$firstimage}' class="xepan-commerce-item-image-to-zoom")
+    {/zoom3_image}
+    .grid.images_3_of_2.xshop-item-image-list(id='gal1{$_name}' style="margin-top:30px;")
+      {rows}
+      {row}
+      a.xshop-item-image-link.elevatezoom-gallery(style="float:left" href='\#{$id}' data-image='{$file}' data-zoom-image='{$file}')
+        img(id='img_{$id}' src='{$thumb_url}' alt='{$img_alt}' title='{$img_title}' data-imagezoom='true' style="width: 18%;, height: auto;, float: left;, max-width: 235px;")
+      {/row}
+      {/rows}
+      .clearfix

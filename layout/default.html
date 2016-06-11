@@ -46,7 +46,7 @@ xEpan-ATK-Header-End-->
 		<ul>
 			<li><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Free and Fast Delivery</li>
 			<li><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Free shipping On all orders</li>
-			<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">info@example.com</a></li>
+			<li><div xepan-component="xepan/base/Tool_UserPanel" layout="micro_login" class="xepan-component xepan-serverside-component" show_micro_login="true"></div></li>
 		</ul>
 	</div>
 </div>
@@ -55,12 +55,12 @@ xEpan-ATK-Header-End-->
 <div class="header-bot">
 	<div class="container">
 		<div class="col-md-3 header-left">
-			<h1><a href="index.html"><img src="images/logo3.jpg"></a></h1>
+			<h1><a href="index"><img src="images/logo3.jpg"></a></h1>
 		</div>
 		<div class="col-md-6 header-middle">
 			<form>
 				<div class="search">
-					<input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
+					<div class="xepan-component xepan-serverside-component" xepan-component="xepan/commerce/Tool_Search" style="height:40px;"></div>
 				</div>
 				<div class="section_room">
 					<select id="country" onchange="change_country(this.value)" class="frm-field required">
@@ -111,76 +111,11 @@ xEpan-ATK-Header-End-->
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav menu__list">
-					<li class="active menu__item menu__item--current"><a class="menu__link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
-					<li class="dropdown menu__item">
-						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">men's wear <span class="caret"></span></a>
-							<ul class="dropdown-menu multi-column columns-3">
-								<div class="row">
-									<div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-										<a href="mens.html"><img src="images/woo1.jpg" alt=" "/></a>
-									</div>
-									<div class="col-sm-3 multi-gd-img">
-										<ul class="multi-column-dropdown">
-											<li><a href="mens.html">Clothing</a></li>
-											<li><a href="mens.html">Wallets</a></li>
-											<li><a href="mens.html">Footwear</a></li>
-											<li><a href="mens.html">Watches</a></li>
-											<li><a href="mens.html">Accessories</a></li>
-											<li><a href="mens.html">Bags</a></li>
-											<li><a href="mens.html">Caps & Hats</a></li>
-										</ul>
-									</div>
-									<div class="col-sm-3 multi-gd-img">
-										<ul class="multi-column-dropdown">
-											<li><a href="mens.html">Jewellery</a></li>
-											<li><a href="mens.html">Sunglasses</a></li>
-											<li><a href="mens.html">Perfumes</a></li>
-											<li><a href="mens.html">Beauty</a></li>
-											<li><a href="mens.html">Shirts</a></li>
-											<li><a href="mens.html">Sunglasses</a></li>
-											<li><a href="mens.html">Swimwear</a></li>
-										</ul>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</ul>
-					</li>
-					<li class="dropdown menu__item">
-						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">women's wear <span class="caret"></span></a>
-							<ul class="dropdown-menu multi-column columns-3">
-								<div class="row">
-									<div class="col-sm-3 multi-gd-img">
-										<ul class="multi-column-dropdown">
-											<li><a href="womens.html">Clothing</a></li>
-											<li><a href="womens.html">Wallets</a></li>
-											<li><a href="womens.html">Footwear</a></li>
-											<li><a href="womens.html">Watches</a></li>
-											<li><a href="womens.html">Accessories</a></li>
-											<li><a href="womens.html">Bags</a></li>
-											<li><a href="womens.html">Caps & Hats</a></li>
-										</ul>
-									</div>
-									<div class="col-sm-3 multi-gd-img">
-										<ul class="multi-column-dropdown">
-											<li><a href="womens.html">Jewellery</a></li>
-											<li><a href="womens.html">Sunglasses</a></li>
-											<li><a href="womens.html">Perfumes</a></li>
-											<li><a href="womens.html">Beauty</a></li>
-											<li><a href="womens.html">Shirts</a></li>
-											<li><a href="womens.html">Sunglasses</a></li>
-											<li><a href="womens.html">Swimwear</a></li>
-										</ul>
-									</div>
-									<div class="col-sm-6 multi-gd-img multi-gd-text ">
-										<a href="womens.html"><img src="images/woo.jpg" alt=" "/></a>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</ul>
-					</li>
-					<li class=" menu__item"><a class="menu__link" href="electronics.html">Electronics</a></li>
-					<li class=" menu__item"><a class="menu__link" href="codes.html">Short Codes</a></li>
-					<li class=" menu__item"><a class="menu__link" href="contact.html">contact</a></li>
+					<li class="active menu__item menu__item--current"><a class="menu__link" href="index">Home <span class="sr-only">(current)</span></a></li>					
+					<li class=" menu__item"><a class="menu__link" href="codes">About Us</a></li>
+					<li class=" menu__item"><a class="menu__link" href="codes">Faq</a></li>
+					<li class=" menu__item"><a class="menu__link" href="codes">Short Codes</a></li>
+					<li class=" menu__item"><a class="menu__link" href="contact">contact</a></li>
 				  </ul>
 				</div>
 			  </div>
@@ -188,19 +123,42 @@ xEpan-ATK-Header-End-->
 		</div>
 		<div class="top_nav_right">
 			<div class="cart box_1">
-						<a href="checkout.html">
-							<h3> <div class="total">
-								<div checkout_page="checkout" cart_detail_url="cart" layout="short_cart" id="126bb511-772f-423c-d89b-5574f83482d9" class="xepan-component xepan-serverside-component" xepan-component="xepan/commerce/Tool_Cart"></div></div>
-								
-							</h3>
-						</a>
-						<p><br></p>
-						
+					<div checkout_page="checkout" cart_detail_url="cart" layout="short_cart" id="126bb511-772f-423c-d89b-5574f83482d9" class="xepan-component xepan-serverside-component" xepan-component="xepan/commerce/Tool_Cart"></div>
+					<p><br></p>
 			</div>	
 		</div>
 		<div class="clearfix"></div>
 	</div>
 </div>
+<div class="ban-top" style="background-color:#a0a0a0">
+	<div class="container"> 
+		<div class="top_nav_left">
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
+				  <ul class="nav navbar-nav menu__list">
+				  	<li class="dropdown menu__item">
+						<div id="c3a0c306-48df-410e-aabd-039a8e91b401" class="xepan-component xepan-serverside-component" xepan-component="xepan/commerce/Tool_Category"></div>
+					</li>
+				  </ul>
+				</div>
+			  </div>
+			</nav>	
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+
 <!-- //banner-top -->
 <div class="xepan-component xepan-sortable-component xepan-page-wrapper">
     {$Content}
@@ -209,7 +167,7 @@ xEpan-ATK-Header-End-->
 <div class="footer">
 	<div class="container">
 		<div class="col-md-3 footer-left">
-			<h2><a href="index.html"><img src="images/logo3.jpg" alt=" " /></a></h2>
+			<h2><a href="index"><img src="images/logo3.jpg" alt=" " /></a></h2>
 			<p>Neque porro quisquam est, qui dolorem ipsum quia dolor
 			sit amet, consectetur, adipisci velit, sed quia non 
 			numquam eius modi tempora incidunt ut labore 
@@ -230,12 +188,12 @@ xEpan-ATK-Header-End-->
 				<div class="col-md-4 sign-gd">
 					<h4>Information</h4>
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="mens.html">Men's Wear</a></li>
-						<li><a href="womens.html">Women's Wear</a></li>
-						<li><a href="electronics.html">Electronics</a></li>
-						<li><a href="codes.html">Short Codes</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="index">Home</a></li>
+						<li><a href="mens">Men's Wear</a></li>
+						<li><a href="womens">Women's Wear</a></li>
+						<li><a href="electronics">Electronics</a></li>
+						<li><a href="codes">Short Codes</a></li>
+						<li><a href="contact">Contact</a></li>
 					</ul>
 				</div>
 				
@@ -250,15 +208,15 @@ xEpan-ATK-Header-End-->
 				<div class="col-md-4 sign-gd flickr-post">
 					<h4>Flickr Posts</h4>
 					<ul>
-						<li><a href="single.html"><img src="images/b15.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/b16.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/b17.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/b18.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/b15.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/b16.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/b17.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/b18.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/b15.jpg" alt=" " class="img-responsive" /></a></li>
+						<li><a href="single"><img src="images/b15.jpg" alt=" " class="img-responsive" /></a></li>
+						<li><a href="single"><img src="images/b16.jpg" alt=" " class="img-responsive" /></a></li>
+						<li><a href="single"><img src="images/b17.jpg" alt=" " class="img-responsive" /></a></li>
+						<li><a href="single"><img src="images/b18.jpg" alt=" " class="img-responsive" /></a></li>
+						<li><a href="single"><img src="images/b15.jpg" alt=" " class="img-responsive" /></a></li>
+						<li><a href="single"><img src="images/b16.jpg" alt=" " class="img-responsive" /></a></li>
+						<li><a href="single"><img src="images/b17.jpg" alt=" " class="img-responsive" /></a></li>
+						<li><a href="single"><img src="images/b18.jpg" alt=" " class="img-responsive" /></a></li>
+						<li><a href="single"><img src="images/b15.jpg" alt=" " class="img-responsive" /></a></li>
 					</ul>
 				</div>
 				<div class="clearfix"></div>

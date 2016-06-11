@@ -1,0 +1,30 @@
+div(id='{$_name}')
+	{category_list}
+	#bs-example-navbar-collapse-1.collapse.navbar-collapse.menu--shylock
+		{rows}{row}
+		ul.nav.navbar-nav.menu__list
+			li.dropdown.menu__item(data-id='{$id}')
+				a.dropdown-toggle.menu__link(href="{$url}", data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+					| {$name}
+					{item_count_wrapper}{$item_count} - items {/} 
+					span.caret
+				ul.dropdown-menu.multi-column.columns-3
+					.row
+						{image_wrapper}
+						.col-sm-6.multi-gd-img1.multi-gd-text
+							a(href='mens.html')
+								img(src="{$category_image_url}", alt=' ')
+						{/}
+						{price_wrapper}
+						.col-sm-3.multi-gd-img
+							ul.multi-column-dropdown
+								li
+									a(href='mens.html') {$min_price} - {$max_price}
+						{/}
+						.col-sm-3.multi-gd-img
+							ul.multi-column-dropdown
+								li
+									{$nested_category}
+						.clearfix
+		{/}{/}
+	{/}

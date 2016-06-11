@@ -46,8 +46,7 @@ div(id='{$_name}' class="{$class} row" style="{$style}")
         {/}
         {addtocart_wrapper}
         small
-          .item_add.single-item.hvr-outline-out.button2
-          .xepan-commerce-item-addtocart(data-xsnbitemid="{$id}" data-name="{$name}") {$Addtocart}
+          .xepan-commerce-item-addtocart(data-xsnbitemid="{$id}" data-name="{$name}" style="display:inline-block; ") {$Addtocart}
         {/}
   {/}{/}
 
@@ -60,8 +59,3 @@ div(id='{$_name}' class="{$class} row" style="{$style}")
   .xepan-commerce-item-paginator(style='float:none; clear:both')
     {$Paginator}
   {/}
-
-  style.
-    .xepan-commerce-item-addtocart span{
-      font-size: 1.2em;
-    }

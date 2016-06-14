@@ -43,6 +43,13 @@ ul{
 label{
 	margin:0;
 }
+.content-lgrid .xepan-commerce-item-paginator .atk-box-small{
+  display: none;
+}
+
+.content-rgrid .xepan-commerce-item-paginator .atk-box-small{
+  display: none;
+}
 /*-- header --*/
 .header {
     border-bottom: 1px solid #eee;
@@ -2860,7 +2867,7 @@ td.invert-image a img {
 .checkout-left-basket ul {
     padding: 4px 25px;
 }
-.checkout-left-basket ul li:nth-child(5) {
+.checkout-left-basket ul li:nth-child(7) {
     border-top: 1px solid #ccc;
     padding: 20px 0 0;
 }

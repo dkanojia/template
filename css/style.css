@@ -5131,4 +5131,11 @@ td.invert-image a img {
     margin: 5px auto 6px;
 }
 }
+.content-img-left .row{
+  margin-left: 0!important;
+  margin-right: 0!important;
+}
+.xepan-commerce-item .info-box .info-content{
+  margin-top: 15px!important;
+}
 /*-- //responsive media queries --*/
